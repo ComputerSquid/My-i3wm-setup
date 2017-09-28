@@ -206,7 +206,7 @@ set $bright-white #e9e9e9
 #class                  border   	     backgr.  	    text    	    indicator
 client.focused          $purple   	   $purple   	    #white  	    $bright-yellow
 client.unfocused        $bright-black  $bright-black  $bright-black $bright-yellow
-client.focused_inactive $cyan    	     $cyan   	      $cyan  	      $bright-yellow
+#client.focused_inactive $cyan    	     $cyan   	      $cyan  	      $bright-yellow
 client.urgent           $red       	   $red     	    $red  	 	    $red
 
 
@@ -295,6 +295,7 @@ bar {
             inactive_workspace #0c0d0e #0c0d0e #b7b8b9
             urgent_workspace #e31a1c #e31a1c #0c0d0e
         }
+    }
 
 ###########################################################################
 ###################  I 3  G A P S  N E X T   ##############################
@@ -307,12 +308,12 @@ bar {
 # want it
 # packer i3-gaps-next-git --noedit
 
-#for_window [class="^.*"] border pixel 10
-#for_window [class="urxvt|URxvt"] border pixel 5
-#gaps inner 20
-#gaps outer 20
+for_window [class="^.*"] border pixel 3
+for_window [class="Termite"] border pixel 5
+gaps inner 20
+gaps outer 20
 smart_gaps on
-#smart_borders on
+smart_borders on
 
 
 ###########################################################################
@@ -323,7 +324,7 @@ smart_gaps on
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+bindsym $mod+Shift+z mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
