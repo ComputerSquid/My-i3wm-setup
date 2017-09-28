@@ -1,0 +1,28 @@
+[global_config]
+  scroll_tabbar = True
+  title_font = Inconsolata-g for Powerline Medium 11
+  title_hide_sizetext = True
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Inconsolata-g for Powerline Medium 11
+    foreground_color = "#839496"
+    show_titlebar = False
+    use_system_font = False
+  [[stayopen]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    exit_action = hold
+    foreground_color = "#839496"
