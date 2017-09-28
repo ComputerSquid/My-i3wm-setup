@@ -59,7 +59,7 @@ font = Roboto Mono for Powerline, 8
 foreground = #e6e1dc
 foreground_bold = #e6e1dc
 cursor = #e6e1dc
-background = rgba(24, 19, 24, .6)
+background = rgba(24, 19, 24, .8)
 
 # 16 color space
 color0  = #181818
