@@ -1,5 +1,6 @@
 # Arch Linux [i3-gaps]
 This is my i3wm setup
+To install, place the files in the Home folder.
 
 ### In order to use my config you have to install:
 
