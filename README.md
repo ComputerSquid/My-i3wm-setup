@@ -3,23 +3,31 @@ This is my i3wm setup
 
 ### In order to use my config you have to install:
 
-#### For the Terminal:
-1. A linux or other unix system (Duh, obviously)
-2. Zsh
-3. Powerlevel9k (You can get it using Oh my Zsh)
-4. acpi (To monitor the battery status)
+#### Must have:
+1: Font from http://fontawesome.io/
+2: i3-gaps, i3bar and i3blocks
+3: rofi
+4: i3lock
+5: scrot
+6: light-git
+7: amixer
+8: playerctl
+9: pacaur
+10: systat
+11: xorg-xinput
+12: compton
+13: i3status
+14: zsh
+15: oh-my-zsh
+16: termite
 
-#### For the window manager:
-1. i3-gaps
-2. i3blocks (This is a replacement for the default i3status)
-3. Nerd Fonts patched fonts (I use Source Code Pro and Roboto Mono)
-4. Rofi (Replacement for dmenu)
-6. Compton (Compositor to get window transparency)
-7. playerctl (To see current song in i3blocks, works with Spotify and many others, cmus does not need it)
-
-##### Optional but highly recommended:
-1. xfce4-power-manager (Simple way to monitor battery status)
-2. xfce4-notifyd (Helpful to get GTK notifications like current song or battery status)
+#### Recommended
+1: lxappearance
+2: Ranger
+3: Htop
+4: gthumb
+5: gufw
+6: Nerd Fonts patched fonts
 
 ### This is how it looks like:
 ![Desktop](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224510_3200x1800_scrot.png)
@@ -27,3 +35,6 @@ This is my i3wm setup
 ![Bussy](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223325_3200x1800_scrot.png)
 ![Editing](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224429_3200x1800_scrot.png)
 
+### Credits:
+1: https://github.com/da-edra/dotfiles
+2: https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes/space
