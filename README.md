@@ -21,20 +21,32 @@ This is my i3wm setup
 8: playerctl
 
 9: pacaur
+
 10: systat
+
 11: xorg-xinput
+
 12: compton
+
 13: i3status
+
 14: zsh
+
 15: oh-my-zsh
+
 16: termite
 
 #### Recommended
 1: lxappearance
+
 2: Ranger
+
 3: Htop
+
 4: gthumb
+
 5: gufw
+
 6: Nerd Fonts patched fonts
 
 ### This is how it looks like:
@@ -45,4 +57,5 @@ This is my i3wm setup
 
 ### Credits:
 1: https://github.com/da-edra/dotfiles
+
 2: https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes/space
