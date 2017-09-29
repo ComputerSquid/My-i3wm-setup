@@ -1,4 +1,4 @@
-# Arch Linux [i3-gaps + i3blocks + zsh]
+# Arch Linux [i3-gaps]
 This is my i3wm setup
 
 ### In order to use my config you have to install:
