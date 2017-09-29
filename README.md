@@ -22,6 +22,8 @@ This is my i3wm setup
 2. xfce4-notifyd (Helpful to get GTK notifications like current song or battery status)
 
 ### This is how it looks like:
-![Desktop](https://github.com/da-edra/dotfiles/blob/master/.desktop.png)
+![Desktop](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224510_3200x1800_scrot.png)
+![Rofi](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223025_3200x1800_scrot.png)
+![Bussy](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223325_3200x1800_scrot.png)
+![Editing](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224429_3200x1800_scrot.png)
 
-Feel free to clone or fork my repo, if you make any interesting modifications, please share them with us! :)
