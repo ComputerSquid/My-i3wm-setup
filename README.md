@@ -5,6 +5,7 @@ This is my i3wm setup
 
 #### Must have:
 1: Font from http://fontawesome.io/
+
 2: i3-gaps, i3bar and i3blocks
 3: rofi
 4: i3lock
