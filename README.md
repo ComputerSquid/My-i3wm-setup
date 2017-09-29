@@ -4,22 +4,37 @@ This is my i3wm setup
 ### In order to use my config you have to install:
 
 #### Must have:
-1: Font from http://fontawesome.io/     9: light-git
+1: Font from http://fontawesome.io/
 
-2: i3-gaps, i3bar and i3blocks          10: amixer
+2: i3-gaps, i3bar and i3blocks
 
-3: rofi                                 11: playerctl
+3: rofi
 
-4: i3lock                               12: pacaur
+4: i3lock
 
-5: scrot                                13: systat
+5: scrot
 
-6: xorg-xinput                          14: i3status
+6: light-git
 
-7: compton                              15: zsh
+7: amixer
 
-8: termite                              16: oh-my-zsh
+8: playerctl
 
+9: pacaur
+
+10: systat
+
+11: xorg-xinput
+
+12: compton
+
+13: i3status
+
+14: zsh
+
+15: oh-my-zsh
+
+16: termite
 
 
 
