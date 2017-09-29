@@ -1,0 +1,114 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+
+! ^ The above lines are no comments!
+! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
+
+Xft.dpi: 220
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+XTerm*background: #1b1b1b
+XTerm*foreground: #e7e7e7
+XTerm*pointerColor: #16A085
+XTerm*faceName: Fixed
+XTerm*faceSize: 11
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            12000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+urxvt*background: rgba:0000/0000/0200/c800
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:Monospace:pixelsize=28
+URxvt*boldFont: xft:Monospace:pixelsize=28
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+
+! special
+*.foreground:   #cfcfc2
+*.background:   #232629
+*.cursorColor:  #cfcfc2
+
+! black
+*.color0:       #2a2e32
+*.color8:       #31363b
+
+! red
+*.color1:       #c0392b
+*.color9:       #f44f4f
+
+! green
+*.color2:       #218058
+*.color10:      #27ae60
+
+! yellow
+*.color3:       #fdbc4b
+*.color11:      #fdbc4b
+
+! blue
+*.color4:       #2980b9
+*.color12:      #0099ff
+
+! magenta
+*.color5:       #8e44ad
+*.color13:      #af81ff
+
+! cyan
+*.color6:       #27aeae
+*.color14:      #31dddd
+
+! white
+*.color7:       #acada1
+*.color15:      #cfd0c2
+
+! ------------------------------------------------------------------------------
+! ROFI  color theme
+! ----rofi.color-enabled: true
+rofi.color-window: #252a2f, #1d1e24, #1f2836
+rofi.color-normal: argb:0000000, #d8dee9, argb:0000000, #95d5b9, #383b44
+rofi.color-active: argb:0000000, #c8dad6, argb:0000000, #52b9c1, #ffffff
+rofi.color-urgent: argb:0000000, #f3ecea, argb:0000000, #e48686, #e3e0ff
+rofi.separator-style:   solid--------------------------------------------------------------------------

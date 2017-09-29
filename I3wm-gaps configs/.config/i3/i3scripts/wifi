@@ -1,0 +1,43 @@
+#!/bin/bash
+# Copyright (C) 2014 Alexander Keller <github@nycroth.com>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#------------------------------------------------------------------------
+
+INTERFACE="${BLOCK_INSTANCE:-wlan0}"
+
+#------------------------------------------------------------------------
+
+
+if [[ "$(cat /sys/class/net/$INTERFACE/operstate)" = 'down' ]]; then
+  if [ $BLOCK_BUTTON -eq 1 ]; then
+    i3-msg exec "termite --exec=sudo\ wifi-menu" > /dev/null
+  fi
+  COLOR=red
+  TEXT=down
+else
+  COLOR='lime green'
+  if [ $BLOCK_BUTTON -eq 1 ]; then
+    TEXT=$(hostname -i)
+    TEXT+=$(iwgetid -r)
+  elif [ $BLOCK_BUTTON -eq 3 ]; then
+    TEXT=$(curl bot.whatismyipaddress.com)
+  else
+    QUALITY=$(cat /proc/net/wireless | grep -o "\-[0-9]\+\." | grep -o "\-[0-9]\+")
+    TEXT="${QUALITY} dBm"
+  fi
+fi
+
+echo "<span color='#8CE000'></span>  ${TEXT}"
