@@ -58,8 +58,6 @@ To install, place the files in the Home folder.
 ### This is how it looks like:
 ![Desktop](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224510_3200x1800_scrot.png)
 ![Rofi](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223025_3200x1800_scrot.png)
-![Bussy](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223325_3200x1800_scrot.png)
-![Editing](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224429_3200x1800_scrot.png)
 
 ### Credits:
 1: https://github.com/da-edra/dotfiles
