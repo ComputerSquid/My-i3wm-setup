@@ -65,3 +65,5 @@ To install, place the files in the Home folder.
 1: https://github.com/da-edra/dotfiles
 
 2: https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes/space
+
+3: http://dotshare.it/dots/1439/
