@@ -179,36 +179,37 @@ bindsym $mod+r mode "resize"
 ###########################################################################
 
 
-# Hybrid colors
-set $black  #000000
-set $white  #babdb6
-set $green  #80852d
-set $blue   #82b8f2
-set $purple  #ad7fa8
-set $red     #ff8888
-set $yellow #ffaa55
-set $bright-black #555753
-set $bright-red #e5505f
-set $bright-green #b7e234
-set $bright-yellow #e8621d
-set $bright-blue #0088CC
-set $bright-purple #cb99e1
-set $bright-cyan #34E2E2
-set $bright-white #e9e9e9
-set $cyan	#00afd7
-set $acqua	#00d787
-set $wine 	#72003e
-set $magenta 	#af005f
-set $orange 	#ff8700
-set $silver 	#e4e4e4
-set $elegant	#1C2331
+set_from_resource $darkblack   background  #000000
+set_from_resource $black       background  #000000
+set_from_resource $darkred     color0  #000000
+set_from_resource $red         color8  #000000
+set_from_resource $darkgreen   color1  #000000
+set_from_resource $green       color9  #000000
+set_from_resource $darkyellow  color2  #000000
+set_from_resource $yellow      color10 #000000
+set_from_resource $darkblue    color3  #000000
+set_from_resource $blue        color11 #000000
+set_from_resource $darkmagenta color4  #000000
+set_from_resource $magenta     color12 #000000
+set_from_resource $darkcyan    color5  #000000
+set_from_resource $cyan        color13 #000000
+set_from_resource $darkidk     color6  #000000
+set_from_resource $idk	       color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
 
-#class                  border   	     backgr.  	    text    	    indicator
-client.focused          $purple   	   $purple   	    #white  	    $bright-yellow
-client.unfocused        $bright-black  $bright-black  $bright-black $bright-yellow
-#client.focused_inactive $cyan    	     $cyan   	      $cyan  	      $bright-yellow
-client.urgent           $red       	   $red     	    $red  	 	    $red
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
+
+# class                 border  	backgr.       text_indicator 	child_border
+client.focused          $darkgreen     $darkgreen     $darkwhite  	$darkgreen       $darkgreen
+client.focused_inactive $black    $black     $darkwhite  	$black       $black
+client.unfocused        $black    $black     $darkwhite  	$black       $black
+client.urgent           $darkgreen     $darkgreen     $darkwhite  	$darkgreen       $darkgreen
+client.placeholder      $darkgreen     $darkgreen     $darkwhite  	$darkgreen       $darkgreen
+
+client.background       $darkgreen
 
 
 
@@ -224,8 +225,8 @@ bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 
 # Media player controls
@@ -278,41 +279,27 @@ exec xinput --set-prop 12 'libinput Accel Speed' 0
 new_window 1pixel
 
 ###########################################################################
-###################        I3 BLOCKS	     ##############################
+#####################        I3 BLOCKS	     ##############################
 ###########################################################################
 
-#bar {
-#        font pango:mono 9
+#bar
+#{
 #	position top
-#        tray_output none
-#        status_command i3blocks -c ~/.i3blocks/i3blocks.conf
-#        colors {
-#            background #0c0d0e
-#            statusline #b7b8b9
-#
-#            focused_workspace #b7b8b9 #b7b8b9 #0c0d0e
-#            active_workspace #b7b8b9 #b7b8b9 #0c0d0e
-#            inactive_workspace #0c0d0e #0c0d0e #b7b8b9
-#            urgent_workspace #e31a1c #e31a1c #0c0d0e
-#        }
-#    }
+#  tray_output none
+#	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	font pango: SauceCodePro Nerd Font Black 9
+#	colors
+#	{
+#                        # Border	# Background	# Text
+#		focused_workspace   $silver	  $silver		$elegant
+#		active_workspace    $elegant  $elegant  $orange
+#		inactive_workspace  $elegant  $elegant 	$cyan
+#		urgent_workspace    $wine     $wine     $silver
+#		background          $elegant
+#    	}
+#}
 
-bar
-{
-	position top
-  tray_output none
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	font pango: SauceCodePro Nerd Font Black 9
-	colors
-	{
-                        # Border	# Background	# Text
-		focused_workspace   $silver	  $silver		$elegant
-		active_workspace    $elegant  $elegant  $orange
-		inactive_workspace  $elegant  $elegant 	$cyan
-		urgent_workspace    $wine     $wine     $silver
-		background          $elegant
-    	}
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ###########################################################################
 ###################  I 3  G A P S  N E X T   ##############################

@@ -1,0 +1,355 @@
+############
+## Colors ##
+############
+
+[colors]
+background = #000000
+background-alt = #000000
+foreground = #ffffff
+foreground-alt = #555555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+
+##################
+## Bar settings ##
+##################
+
+[bar/main]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 49
+offset-x = 0
+offset-y = 0
+
+;bottom = true
+
+;background = ${xrdb:color1}
+background = ${xrdb:background}
+foreground = ${colors.foreground}
+
+
+overline-size = 0
+overline-color = #f00
+underline-size = 2
+underline-color = #CA4A4B
+
+border-bottom-size = 3
+border-bottom-color = #CA4A4B
+
+border-top-size = 0
+border-top-color = #CA4A4B
+
+;border-left-size = 3
+;border-left-color = #CA4A4B
+
+;border-right-size = 3
+;border-right-color = #CA4A4B
+
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 5
+
+
+###########
+## Fonts ##
+###########
+
+font-0 = Fira Sans:size=19:weight=regular;2
+font-1 = FontAwesome:size=19;2
+
+
+
+######################
+## Modules position ##
+######################
+
+modules-left = i3 music
+modules-center =
+modules-right = dropbox pkg wlan temperature memory cpu xbacklight volume battery xkeyboard date
+
+;tray-position = right
+tray-padding = 3
+;tray-transparent = false
+tray-background = ${root.background}
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+########
+## i3 ##
+########
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+pin-workspaces = true
+
+ws-icon-0 = 1:  www;1:  www
+ws-icon-1 = 2:  terminal;2:  terminal
+ws-icon-2 = 3:  code;3:  code
+ws-icon-3 = 4:  files;4:  files
+ws-icon-4 = 5:  virtual machines;5:  virtual machines
+ws-icon-5 = 6:  status;6:  status
+ws-icon-6 = 7:  random;7: 
+ws-icon-7 = 8:  random;8: 
+ws-icon-8 = 9:  music;9:  music
+ws-icon-default = |
+
+
+format = <label-state>
+
+label-mode = "%mode%"
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
+label-mode-padding = 3
+
+label-focused = "%icon%"
+label-focused-foreground = ${colors.background}
+label-focused-background = #CA4A4B
+label-focused-underline =
+label-focused-padding = 3
+
+label-unfocused = "%icon%"
+label-unfocused-padding = 3
+
+label-urgent = "%icon%"
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 4
+
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.background}
+label-visible-padding = 4
+
+
+
+
+###############
+## Backlight ##
+################
+
+[module/xbacklight]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+format = <label>
+label =  %percentage%%
+
+##############
+## Keyboard ##
+##############
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+label-layout = %{F#55}%{F-} %layout%
+label-layout-underline = ${colors.secondary}
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+mount-1 = /home
+mount-2 = /invalid/mountpoint
+
+label-mounted = %mountpoint%: %percentage_free%%
+
+label-unmounted = %mountpoint%: not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+
+#########
+## CPU ##
+#########
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #FFFFFF
+format-underline =
+label = %percentage%%
+
+
+#########
+## RAM ##
+#########
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #FFFFFF
+format-underline =
+label = %percentage_used%%
+
+
+##############
+## Wireless ##
+##############
+
+[module/wlan]
+type = internal/network
+; To find interface use ifconfig
+interface = wlp58s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline =
+format-disconnected-underline =
+
+label-connected = "%{A1:urxvt -e nmtui:}  %essid%%{A}"
+label-disconnected = "%{A1:urxvt -e nmtui:} %ifname% disconnected %{A}"
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = #FFFFFF
+
+
+
+##########
+## Date ##
+##########
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = " %a, %d %B |"
+time = "%H:%M:%S "
+
+format-prefix =
+format-prefix-foreground = ${colors.background}
+format-background = #CA4A4B
+format-foreground = ${colors.background}
+
+label = "%{A1:steam:}  %date% %time%  %{A}"
+
+
+############
+## Volume ##
+############
+
+[module/volume]
+type = internal/volume
+master-mixer = Master
+
+format-volume = <label-volume>
+label-volume =  %percentage%%
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix =
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+
+
+#############
+## Battery ##
+#############
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
+
+format-charging = " <ramp-capacity> <label-charging>"
+format-charging-underline =
+label-charging = Charging %percentage%%
+
+format-discharging = " <ramp-capacity>  <label-discharging>"
+format-discharging-underline =
+
+format-full-prefix = "  "
+format-full-prefix-foreground = #FFFFFF
+
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-foreground = #FFFFFF
+ramp-capacity-underline =
+
+click-left = urxvt
+
+##############
+## CPU Temp ##
+##############
+
+[module/temperature]
+type = internal/temperature
+; Thermal zone to use
+; To list all the zone types, run
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+thermal-zone = 6
+warn-temperature = 60
+
+
+format = <ramp> <label>
+format-underline =
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label =  %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 =
+ramp-1 =
+ramp-2 =
+ramp-foreground = ${colors.foreground-alt}
+
+
+
+[module/music]
+type = custom/script
+interval = 2
+
+label = %output:0:45:...%
+exec = ~/.config/polybar/scripts/mpris.sh
+click-left = playerctl previous
+click-middle = playerctl play-pause
+click-right = playerctl next
+
+[module/pkg]
+type = custom/script
+interval = 1200
+format = <label>
+format-underline = #dc322f
+label = %output:0:30%
+exec = .config/polybar/scripts/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/dropbox]
+type = custom/script
+exec = ~/.config/polybar/scripts/dropbox.sh
+click-left = dropbox start
+;click-left = echo sleeping && sleep 4 & echo sleeping 2
+interval = 2
+format-padding = 2
