@@ -277,7 +277,7 @@ label-muted = sound muted
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 100
+full-at = 98
 
 format-charging = " <ramp-capacity> <label-charging>"
 format-charging-underline =
