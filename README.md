@@ -56,8 +56,9 @@ To install, place the files in the Home folder.
 6: Nerd Fonts patched fonts
 
 ### This is how it looks like:
-![Desktop](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-224510_3200x1800_scrot.png)
-![Rofi](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223025_3200x1800_scrot.png)
+![Desktop](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-10-08-174445_3200x1800_scrot.png)
+![Rofi](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-09-29-223325_3200x1800_scrot.png)
+![Bussy](https://github.com/MrSnowMonster/My-i3wm-setup/blob/master/screenshots/2017-10-08-174546_3200x1800_scrot.png)
 
 ### Credits:
 1: https://github.com/da-edra/dotfiles
