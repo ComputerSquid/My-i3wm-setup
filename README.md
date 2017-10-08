@@ -7,11 +7,11 @@ To install, place the files in the Home folder.
 #### Must have:
 1: Font from http://fontawesome.io/
 
-2: i3-gaps, i3bar and i3blocks
+2: i3-gaps
 
 3: rofi
 
-4: i3lock
+4: Polybar
 
 5: scrot
 
