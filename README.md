@@ -37,6 +37,8 @@ To install, place the files in the Home folder.
 
 16: termite
 
+17: Pulseaudio
+
 
 
 
