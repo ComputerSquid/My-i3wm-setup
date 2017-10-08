@@ -1,8 +1,8 @@
 OUTPUT=`dropbox-cli status | head -1`
-TEXT=""
+TEXT="%{F#ffffff}"
 
 if echo $OUTPUT | grep -q '^Up to date' ; then
-    TEXT=""
+    TEXT="%{F#ffffff}"
 else
     if echo $OUTPUT | grep -q '^Dropbox isn' ; then
         TEXT="%{F#FF0000}"
