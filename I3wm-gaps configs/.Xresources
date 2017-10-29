@@ -105,10 +105,13 @@ URxvt.pointerBlank:         true
 *.color15:      #cfd0c2
 
 ! ------------------------------------------------------------------------------
-! ROFI  color theme
-! ----rofi.color-enabled: true
-rofi.color-window: #252a2f, #1d1e24, #1f2836
-rofi.color-normal: argb:0000000, #d8dee9, argb:0000000, #95d5b9, #383b44
-rofi.color-active: argb:0000000, #c8dad6, argb:0000000, #52b9c1, #ffffff
-rofi.color-urgent: argb:0000000, #f3ecea, argb:0000000, #e48686, #e3e0ff
-rofi.separator-style:   solid--------------------------------------------------------------------------
+! ROFI Color theme
+! Copyright: Rasmus Steinke
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+
+
