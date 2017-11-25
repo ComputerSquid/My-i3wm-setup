@@ -260,6 +260,9 @@ bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'You pressed the sleep shortc
 exec --no-startup-id dropbox start
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton -f
+exec xset s off
+exec xset -dpms
+exec xset s noblank
 
 
 
